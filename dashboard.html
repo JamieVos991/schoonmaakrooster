@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./styles/dashboard.css" />
+  </head>
+  <body>
+    <h1>Nieuwe taken toewijzen</h1>
+
+    <form id="taak-form">
+      <div class="form-group">
+        <label for="weekNumber">Weeknummer:</label>
+        <input
+          type="number"
+          id="weekNumber"
+          name="weekNumber"
+          required
+          min="1"
+          max="52"
+        />
+      </div>
+
+      <!-- Task 1 -->
+      <div class="form-group">
+        <label for="taak1">Taak 1:</label>
+        <select id="taak1" required>
+          <option value="">-- Kies een taak --</option>
+          <option value="Keuken">Keuken</option>
+          <option value="Algemeen">Algemeen</option>
+          <option value="Toilet">Toilet</option>
+          <option value="Badkamer">Badkamer</option>
+        </select>
+
+        <label for="persoon1">Toegewezen aan:</label>
+        <select id="persoon1" required>
+          <option value="">-- Kies een persoon --</option>
+          <option value="Jamie">Jamie</option>
+          <option value="Tiara">Tiara</option>
+          <option value="Anna">Anna</option>
+          <option value="Nuala">Nuala</option>
+        </select>
+      </div>
+
+      <!-- Task 2 -->
+      <div class="form-group">
+        <label for="taak2">Taak 2:</label>
+        <select id="taak2" required>
+          <option value="">-- Kies een taak --</option>
+          <option value="Keuken">Keuken</option>
+          <option value="Algemeen">Algemeen</option>
+          <option value="Toilet">Toilet</option>
+          <option value="Badkamer">Badkamer</option>
+        </select>
+
+        <label for="persoon2">Toegewezen aan:</label>
+        <select id="persoon2" required>
+          <option value="">-- Kies een persoon --</option>
+          <option value="Jamie">Jamie</option>
+          <option value="Tiara">Tiara</option>
+          <option value="Anna">Anna</option>
+          <option value="Nuala">Nuala</option>
+        </select>
+      </div>
+
+      <!-- Task 3 -->
+      <div class="form-group">
+        <label for="taak3">Taak 3:</label>
+        <select id="taak3" required>
+          <option value="">-- Kies een taak --</option>
+          <option value="Keuken">Keuken</option>
+          <option value="Algemeen">Algemeen</option>
+          <option value="Toilet">Toilet</option>
+          <option value="Badkamer">Badkamer</option>
+        </select>
+
+        <label for="persoon3">Toegewezen aan:</label>
+        <select id="persoon3" required>
+          <option value="">-- Kies een persoon --</option>
+          <option value="Jamie">Jamie</option>
+          <option value="Tiara">Tiara</option>
+          <option value="Anna">Anna</option>
+          <option value="Nuala">Nuala</option>
+        </select>
+      </div>
+
+      <!-- Task 4 -->
+      <div class="form-group">
+        <label for="taak4">Taak 4:</label>
+        <select id="taak4" required>
+          <option value="">-- Kies een taak --</option>
+          <option value="Keuken">Keuken</option>
+          <option value="Algemeen">Algemeen</option>
+          <option value="Toilet">Toilet</option>
+          <option value="Badkamer">Badkamer</option>
+        </select>
+
+        <label for="persoon4">Toegewezen aan:</label>
+        <select id="persoon4" required>
+          <option value="">-- Kies een persoon --</option>
+          <option value="Jamie">Jamie</option>
+          <option value="Tiara">Tiara</option>
+          <option value="Anna">Anna</option>
+          <option value="Nuala">Nuala</option>
+        </select>
+      </div>
+
+      <button type="submit">Taken toevoegen</button>
+    </form>
+
+    <p id="bericht"></p>
+
+    <script type="module" src="./scripts/dashboard.js"></script>
+  </body>
+</html>

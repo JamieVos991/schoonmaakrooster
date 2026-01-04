@@ -1,0 +1,103 @@
+main {
+  display: grid;
+  gap: 2rem;
+
+  header {
+    text-align: center;
+    display: grid;
+    height: 8vh;
+    place-items: center;
+  }
+
+  #taken-lijst {
+    display: grid;
+    place-items: center;
+
+    details {
+      font-family: var(--font-family-gillsans);
+      width: 100%;
+
+      summary {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        cursor: pointer;
+        justify-content: space-between;
+
+        #taken-lijst details[open] summary::before {
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 1.1rem;
+          height: 1.1rem;
+          background-image: url("../assets/chevron-right.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          margin-top: -5px;
+          transition: transform 0.3s ease;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          width: 1.1rem;
+          height: 1.1rem;
+          cursor: not-allowed;
+          background-size: contain;
+          background-repeat: no-repeat;
+          transition: transform 0.3s ease;
+          background-image: url(../assets/pen.svg);
+        }
+      }
+
+      ul {
+        display: grid;
+        gap: 0.3rem;
+      }
+    }
+
+    details[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    li {
+      background: var(--tweede-kleur);
+      gap: 1rem;
+      width: 100%;
+      display: flex;
+
+      input[type="checkbox"] {
+        width: 2rem;
+      }
+    }
+
+    .afval-item {
+      padding: 0.5rem 0.5rem;
+      font-weight: 500;
+      background: none;
+    }
+  }
+}
+
+.taak-klaar {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.taak-summary {
+  cursor: pointer;
+}
+
+.subtaak-item {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem !important;
+  align-items: center;
+
+  input[type="checkbox"] {
+    height: 1.2rem;
+  }
+}

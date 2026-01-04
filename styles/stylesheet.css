@@ -1,0 +1,95 @@
+:root {
+  --eerste-kleur: hsl(0, 0%, 0%);
+  --tweede-kleur: hsla(29, 60%, 80%, 0.5);
+  --derde-kleur: hsl(156, 44%, 45%);
+
+  --plastic-kleur: hsl(13, 100%, 65%);
+  --papier-kleur: hsl(186, 39%, 73%);
+  --gft-kleur: hsl(86, 42%, 67%);
+
+  --font-size-p: 1rem;
+  --font-size-heading-h1: 1.6rem;
+  --font-size-heading-h2: 1.2rem;
+  --font-size-heading-h3: 1.6rem;
+
+  --font-family-gillsans: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 3rem 2rem;
+  min-height: 100dvh;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: var(--font-size-p);
+  font-family: var(--font-family-gillsans);
+}
+
+.font-class-h1 {
+  font-size: var(--font-size-heading-h1);
+  font-family: var(--font-family-gillsans);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.font-class-h2 {
+  font-size: var(--font-size-heading-h2);
+  font-family: var(--font-family-gillsans);
+  font-weight: 400;
+
+  &:after {
+    content: " " attr(data-date);
+    color: var(--derde-kleur);
+  }
+}
+
+.font-class-h3 {
+  font-size: var(--font-size-heading-h3);
+  font-family: var(--font-family-gillsans);
+}
+
+#loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--tweede-kleur);
+  border-top: 5px solid var(--eerste-kleur);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  display: none;
+  margin-top: 10rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.plastic {
+  color: var(--plastic-kleur);
+}
+
+.papier {
+  color: var(--papier-kleur);
+}
+
+.gft {
+  color: var(--gft-kleur);
+}
